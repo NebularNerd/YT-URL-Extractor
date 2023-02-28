@@ -9,7 +9,7 @@ I wanted an easy one click solution to grab every YouTube ID from a page, then g
 - Should work with most *monkey varients: Tested/Developed with Chrome Tampermonkey v4.18.1, Also tested on Firefox Greasemonkey 4.11
 
 ## Sounds great, how do I use it?
-Copy/Paste the userscript into a new TamperMonkey script, save and go. Next time you vist a supported page you will see a small clipboard icon 📋 next to the mic icon at the top of the page.  
+Download or Copy/Paste the `YT-URL-Extractor.user.js` into TamperMonkey, save, activate if needed by your &ast;monkey variant and go. Next time you vist a supported page (you may need to refresh if you are already on a YT page) you will see a small clipboard icon 📋 next to the mic icon at the top of the page.  
 
 ![Playlist page](https://user-images.githubusercontent.com/8470449/221897997-c751be58-659b-4584-b0ac-ddbc3275f6fb.jpg)
   
