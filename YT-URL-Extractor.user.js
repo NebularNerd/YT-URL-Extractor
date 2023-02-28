@@ -1,15 +1,16 @@
 // ==UserScript==
 // @name         YouTube.com url copier
 // @namespace    https://github.com/NebularNerd/YT-URL-Extractor
-// @version      2023-02-28
+// @version      2023-02-28a
+// @downloadURL  https://github.com/NebularNerd/YT-URL-Extractor/raw/main/YT-URL-Extractor.user.js
 // @description  Adds a 📋 button at the top of most YouTube pages, extracts multi ID's from those containing playlist style elements or single url from watch pages.
 // @author       NebularNerd
 // @match        https://www.youtube.com/*
 // @match        https://m.youtube.com/*
-// @grant GM.setClipboard
-// @grant GM_setClipboard
-// @run-at document-idle
+// @grant        GM.setClipboard
+// @grant        GM_setClipboard
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=youtube.com
+// @run-at document-idle
 // ==/UserScript==
 
 
