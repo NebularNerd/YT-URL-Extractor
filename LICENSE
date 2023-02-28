@@ -22,7 +22,3 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
 
 For more information, please refer to <https://unlicense.org>
-
-Exceptions:
-- The check current URL code is derived from [resu @ Stackoverflow](https://stackoverflow.com/a/35038669) and is used under their [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) License
-- The check clipboard code is by [Mordo95 @ Reddit](https://www.reddit.com/r/userscripts/comments/p7mra9/comment/h9l6p8c/?utm_source=share&utm_medium=web2x&context=3) while no License is implied we thank and acknowledge their handy dandy spot of code.
