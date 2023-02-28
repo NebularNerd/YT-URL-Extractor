@@ -6,10 +6,17 @@ I wanted an easy one click solution to grab every YouTube ID from a page, then g
 
 ## Features
 - Quick and easy to use
-- Should work with most *monkey varients: Tested/Developed with Chrome Tampermonkey v4.18.1, Also tested on Firefox Greasemonkey 4.11
+- Should work with most &ast;monkey variants: Tested/Developed with Chrome Tampermonkey v4.18.1, Also tested on Firefox Greasemonkey 4.11 (from 2021)
+- Auto updates if your &ast;monkey variant supports it
 
 ## Sounds great, how do I use it?
-Download or Copy/Paste the `YT-URL-Extractor.user.js` into TamperMonkey, save, activate if needed by your &ast;monkey variant and go. Next time you vist a supported page (you may need to refresh if you are already on a YT page) you will see a small clipboard icon 📋 next to the mic icon at the top of the page.  
+- The easiest way to install this is to click this link:  
+[:floppy_disk: YT-URL-Extractor.user.js](https://github.com/NebularNerd/YT-URL-Extractor/raw/main/YT-URL-Extractor.user.js)  
+most &ast;monkey's auto install features will then take care of things, this also can be used to manually trigger an update.
+- **OR**, view the [YT-URL-Extractor.user.js](/YT-URL-Extractor.user.js) and then click the `RAW` button, if you wish to check out the code first.
+- **OR**, Download or Copy/Paste the [YT-URL-Extractor.user.js](/YT-URL-Extractor.user.js) into your &ast;monkey, save and activate.  
+ 
+Next time you vist a supported page (you may need to refresh if you are already on a YT page) you will see a small clipboard icon 📋 next to the mic icon at the top of the page. 
 
 ![Playlist page](https://user-images.githubusercontent.com/8470449/221897997-c751be58-659b-4584-b0ac-ddbc3275f6fb.jpg)
   
@@ -18,7 +25,7 @@ Give that a click and a banner will briefly flash to let you know it's done it j
 ![Banner flash](https://user-images.githubusercontent.com/8470449/221898882-82af3aa8-374a-4659-84c8-ca685e53af53.jpg)  
 
 Paste your output wherever you need it, depending on the page there will be two outcomes:
-- On a single video or short page you'll just the URL from the video you are watching in this style [https://youtu.be/8jMPgvaOXH8](https://youtu.be/8jMPgvaOXH8)
+- On a single video or short page you'll just the URL from the video you are watching in this style [https://youtu.be/8jMPgvaOXH8](https://youtu.be/8jMPgvaOXH8), I know there is the share button, this saves a couple of clicks.
 - On a playlist page or where multiple videos are diplayed you'll get a nice list like this:  
   
   https://youtu.be/UzE1njGyTBw  
@@ -47,7 +54,12 @@ If you are on a channels homepage and they have some sort of carousel/spinner th
 ## To-do
 - [ ] Code optimisation: Code is fast enough but I'm sure there are a couple of things that could be better
 - [ ] Add clipboard button to individual videos links, quickly grab individual URLs as well as whole page
-- [ ] Add auto update
+- [x] Add auto update
+
+## License
+Published under the [The Unlicense](/LICENSE)
+- The check current URL code is derived from [resu @ Stackoverflow](https://stackoverflow.com/a/35038669) and is used under their [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) License
+- The handy check clipboard code is by [Mordo95 @ Reddit](https://www.reddit.com/r/userscripts/comments/p7mra9/comment/h9l6p8c/?utm_source=share&utm_medium=web2x&context=3)
 
 ## Help fuel my caffine habbit
 If you fancy buying me a :coffee: to say thanks, please visit my Ko-Fi page by hitting the button below.  
