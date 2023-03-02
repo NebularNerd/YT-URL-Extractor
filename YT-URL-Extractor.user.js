@@ -1,8 +1,9 @@
 // ==UserScript==
 // @name         YT-URL-Extractor
 // @namespace    https://github.com/NebularNerd/YT-URL-Extractor
-// @version      2023-02-28b
+// @version      2023-03-02
 // @downloadURL  https://github.com/NebularNerd/YT-URL-Extractor/raw/main/YT-URL-Extractor.user.js
+// @updateURL    https://github.com/NebularNerd/YT-URL-Extractor/raw/main/YT-URL-Extractor.user.js
 // @description  Adds a 📋 button at the top of most YouTube pages, extracts multi ID's from those containing playlist style elements or single url from watch pages.
 // @author       NebularNerd
 // @match        https://www.youtube.com/*
