@@ -25,7 +25,7 @@ Give that a click and a banner will briefly flash to let you know it's done it j
 ![Banner flash](https://user-images.githubusercontent.com/8470449/221898882-82af3aa8-374a-4659-84c8-ca685e53af53.jpg)  
 
 Paste your output wherever you need it, depending on the page there will be two outcomes:
-- On a single video or short page you'll just the URL from the video you are watching in this style [https://youtu.be/8jMPgvaOXH8](https://youtu.be/8jMPgvaOXH8), I know there is the share button, this saves a couple of clicks.
+- On a single video or short page you'll get just the URL from the video you are watching in this style [https://youtu.be/8jMPgvaOXH8](https://youtu.be/8jMPgvaOXH8), I know there is the share button, this saves a couple of clicks.
 - On a playlist page or where multiple videos are diplayed you'll get a nice list like this:  
   
   https://youtu.be/UzE1njGyTBw  
