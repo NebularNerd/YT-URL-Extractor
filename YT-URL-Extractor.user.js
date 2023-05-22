@@ -66,7 +66,7 @@
     function banner_flash() {
     var overlaydiv = document.createElement('div');
     overlaydiv.id = 'onatop';
-    overlaydiv.innerHTML = '<style>.centerme {margin: auto;width:75%;background: #d4e9fd; border: 3px solid #d4e9fd;border-radius: 12px; padding: 10px;}</style><div class="centerme"><center><p>Copied to clipboard 📋<p></center></div>';
+    overlaydiv.innerHTML = '<style>.centerme {margin: auto;width:75%;background: #d4e9fd; border: 3px solid #d4e9fd;border-radius: 12px; padding: 10px;}</style><div class="centerme"><center><p>Copied to clipboard 📋</p></center></div>';
     overlaydiv.style = "background: #f2f2f2;margin: auto;font-size: 4em;color:black;padding: 0.3em;width:100%;height:100%;position:fixed;opacity: 0.75;z-index: 9999";
     document.body.appendChild(overlaydiv);
     delay(500).then(() => killit());
