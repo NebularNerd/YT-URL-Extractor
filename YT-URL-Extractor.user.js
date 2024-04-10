@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         YT-URL-Extractor
 // @namespace    https://github.com/NebularNerd/YT-URL-Extractor
-// @version      2023-03-02
+// @version      2024-04-10
 // @downloadURL  https://github.com/NebularNerd/YT-URL-Extractor/raw/main/YT-URL-Extractor.user.js
 // @updateURL    https://github.com/NebularNerd/YT-URL-Extractor/raw/main/YT-URL-Extractor.user.js
 // @description  Adds a 📋 button at the top of most YouTube pages, extracts multi ID's from those containing playlist style elements or single url from watch pages.
@@ -32,12 +32,13 @@
 
     // Regex matcher
     function gottacatchthemall(data){
-        const regexp = /(\/watch\?v=|href="\/watch\?v=|\/shorts\/)([0-9A-z-_]{11})/g;
+        const regexp = /(\/shorts\/|watch.*?v=)([0-9A-z-_]{11})/g;
         const array = [...data.matchAll(regexp)];
         let txt = "";
         array.forEach(myFunction);
         function myFunction(value, index, array) {
             txt += 'https://youtu.be/'+ value[2]+'\n';
+            console.log('Found: ' + txt);
         }
         // Remove duplicates
         let collection = txt.match(/.*/g).filter((item, index, self) => index === self.indexOf(item));
@@ -49,7 +50,7 @@
     function omnomnom() {
         if (currentPage.match(/playlist\?list=/) || currentPage.match(/com\/.*\/(videos|shorts)/)){gottacatchthemall(document.querySelector("#spinner-container+#contents").outerHTML);}
         if (currentPage.match(/\/featured/)){gottacatchthemall(document.querySelector("#header-container+#contents").outerHTML);} // The featured/home page will only grab visible ID's anything not seen on screen is not captured.
-        if (currentPage.match(/watch\?v=/)|| currentPage.match(/com(\/)shorts/)){gottacatchthemall(currentPage);}
+        if (currentPage.match(/watch.*?v=/)|| currentPage.match(/com(\/)shorts/)){gottacatchthemall(currentPage);}
     }
 
     // Delay timer from https://masteringjs.io/tutorials/fundamentals/wait-1-second-then
@@ -102,19 +103,14 @@
         if (currentPage != location.href){
             // page has changed, set new page as 'current'
             currentPage = location.href;
-
-            // do your thing..
-            if (currentPage.match(/playlist\?list=/) || currentPage.match(/com\/.*\/videos/) || currentPage.match(/com\/.*\/shorts/) || currentPage.match(/watch\?v=/) || currentPage.match(/com\/shorts/) || currentPage.match(/\/featured/)) {
-                button();
-            } else {
-                const element = document.getElementById("myButton");
-                element.remove();}
+        } else {
+            letsdoit();
         }
     }, 400);
 
     // Initial button loader, above function only works on page updates so we have to kick off the action.
     function letsdoit(){
-        if (currentPage.match(/playlist\?list=/) || currentPage.match(/com\/.*\/videos/) || currentPage.match(/com\/.*\/shorts/) || currentPage.match(/watch\?v=/)|| currentPage.match(/com\/shorts/) || currentPage.match(/\/featured/)) {
+        if (currentPage.match(/playlist\?list=/) || currentPage.match(/com\/.*\/videos/) || currentPage.match(/com\/.*\/shorts/) || currentPage.match(/watch\?v=/) || currentPage.match(/watch\?.*?v=/) || currentPage.match(/com\/shorts/) || currentPage.match(/\/featured/)) {
             button();
         } else {
             const element = document.getElementById("myButton");
