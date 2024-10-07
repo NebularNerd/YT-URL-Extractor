@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         YT-URL-Extractor
 // @namespace    https://github.com/NebularNerd/YT-URL-Extractor
-// @version      2024-04-10
+// @version      2024-10-07
 // @downloadURL  https://github.com/NebularNerd/YT-URL-Extractor/raw/main/YT-URL-Extractor.user.js
 // @updateURL    https://github.com/NebularNerd/YT-URL-Extractor/raw/main/YT-URL-Extractor.user.js
 // @description  Adds a 📋 button at the top of most YouTube pages, extracts multi ID's from those containing playlist style elements or single url from watch pages.
@@ -48,7 +48,7 @@
 
     // Grab playlist <div> or plain url and send to clipboard
     function omnomnom() {
-        if (currentPage.match(/playlist\?list=/) || currentPage.match(/com\/.*\/(videos|shorts)/)){gottacatchthemall(document.querySelector("#spinner-container+#contents").outerHTML);}
+        if (currentPage.match(/playlist\?list=/) || currentPage.match(/com\/.*\/(videos|shorts)/)){gottacatchthemall(document.querySelector("#contents").innerHTML);}
         if (currentPage.match(/\/featured/)){gottacatchthemall(document.querySelector("#header-container+#contents").outerHTML);} // The featured/home page will only grab visible ID's anything not seen on screen is not captured.
         if (currentPage.match(/watch.*?v=/)|| currentPage.match(/com(\/)shorts/)){gottacatchthemall(currentPage);}
     }
