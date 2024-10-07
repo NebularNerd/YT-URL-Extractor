@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         YT-URL-Extractor
 // @namespace    https://github.com/NebularNerd/YT-URL-Extractor
-// @version      2024-10-07
+// @version      2024-10-07a
 // @downloadURL  https://github.com/NebularNerd/YT-URL-Extractor/raw/main/YT-URL-Extractor.user.js
 // @updateURL    https://github.com/NebularNerd/YT-URL-Extractor/raw/main/YT-URL-Extractor.user.js
 // @description  Adds a 📋 button at the top of most YouTube pages, extracts multi ID's from those containing playlist style elements or single url from watch pages.
@@ -104,20 +104,22 @@
             // page has changed, set new page as 'current'
             currentPage = location.href;
         } else {
-            letsdoit();
+            yturlletsdoit();
         }
     }, 400);
 
     // Initial button loader, above function only works on page updates so we have to kick off the action.
-    function letsdoit(){
+    function yturlletsdoit(){
         if (currentPage.match(/playlist\?list=/) || currentPage.match(/com\/.*\/videos/) || currentPage.match(/com\/.*\/shorts/) || currentPage.match(/watch\?v=/) || currentPage.match(/watch\?.*?v=/) || currentPage.match(/com\/shorts/) || currentPage.match(/\/featured/)) {
             button();
         } else {
-            const element = document.getElementById("myButton");
-            element.remove();}
+            if (document.getElementById("myButton") != null) {
+                document.getElementById("myButton").remove();
+            }
+        }
     }
 
-    letsdoit();
+    yturlletsdoit();
 
 // Nothing below here
 })();
